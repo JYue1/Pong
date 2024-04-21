@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Paddle {
+// James Yue
+
+public class Paddle {
 }
