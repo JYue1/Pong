@@ -9,10 +9,11 @@ public class PongView extends JFrame {
     private final int WINDOW_WIDTH = 1200;
     private final int WINDOW_HEIGHT = 600;
 
-    private Pong p;
+    private Ball b;
+    private Paddle p;
 
-    public PongView(Pong p) {
-        this.p = p;
+    public PongView(Ball b) {
+        this.b = b;
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("Pong Game");
@@ -21,8 +22,6 @@ public class PongView extends JFrame {
     }
 
     public void paint(Graphics g) {
-        myPaint(g);
-
+        b.draw(g);
     }
-
 }
