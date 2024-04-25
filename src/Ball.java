@@ -25,6 +25,9 @@ public class Ball {
         y = y + dy;
     }
 
+    // Make the bounce only if it hits the paddle or the top and bottom. The game will end if it hits the ends of the window
+    // Reset the game and update the score.
+    // if (goes to the left) update the player's score on the left side vice versa
     public void bounce(int xLow, int xHigh, int yLow, int yHigh) {
         // Check for an x bounce.  Note that we bounce if the x is too
         //  low or too high AND IS HEADING IN THE WRONG DIRECTION.
@@ -32,6 +35,7 @@ public class Ball {
             dx = -dx;
         }
 
+        // This is the only one I need
         // Now check for a y bounce.
         if ((y - radius <= yLow && dy < 0) || (y + radius >= yHigh && dy > 0)) {
             dy = -dy;
