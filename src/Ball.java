@@ -25,20 +25,17 @@ public class Ball {
         y = y + dy;
     }
 
-    public boolean bounce(int xLow, int xHigh, int yLow, int yHigh) {
+    public void bounce(int xLow, int xHigh, int yLow, int yHigh) {
         // Check for an x bounce.  Note that we bounce if the x is too
         //  low or too high AND IS HEADING IN THE WRONG DIRECTION.
         if ((x - radius <= xLow && dx < 0) || (x + radius >= xHigh && dx > 0)) {
             dx = -dx;
-            return true;
         }
 
         // Now check for a y bounce.
         if ((y - radius <= yLow && dy < 0) || (y + radius >= yHigh && dy > 0)) {
             dy = -dy;
-            return true;
         }
-        return false;
     }
 
     public void draw(Graphics g) {
