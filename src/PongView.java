@@ -51,8 +51,19 @@ public class PongView extends JFrame {
     }
 
     public void myPaint(Graphics g) {
+//        g.setColor(Color.WHITE);
+//        g.setFont(new Font("Arial", Font.BOLD, 40));
+//        g.drawString("Welcome to Pong", 450, 300);
+
         g.setColor(Color.black);
         g.fillRect(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+        g.setColor(Color.WHITE);
+        for (int i = 0; i < 19; i++) {
+            g.fillRect(450, 45 + (i * 30), 15, 15);
+            g.drawRect(450, 45 + (i * 30), 15, 15);
+        }
+
         leftPaddle.draw(g);
         rightPaddle.draw(g);
         b.draw(g);

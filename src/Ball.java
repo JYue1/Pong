@@ -1,9 +1,9 @@
 // James Yue
+
 import java.awt.Color;
 import java.awt.Graphics;
 
 public class Ball {
-
     private int x;
     private int y;
     private int dx;
@@ -25,6 +25,22 @@ public class Ball {
         y = y + dy;
     }
 
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+    public int getDx() {
+        return dx;
+    }
+    public int getRadius() {
+        return radius;
+    }
+    public void setDirection(int direction) {
+        dx = direction;
+    }
+
     // Make the bounce only if it hits the paddle or the top and bottom. The game will end if it hits the ends of the window
     // Reset the game and update the score.
     // if (goes to the left) update the player's score on the left side vice versa
@@ -35,8 +51,6 @@ public class Ball {
             dx = -dx;
         }
 
-        // This is the only one I need
-        // Now check for a y bounce.
         if ((y - radius <= yLow && dy < 0) || (y + radius >= yHigh && dy > 0)) {
             dy = -dy;
         }

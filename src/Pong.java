@@ -1,5 +1,12 @@
 // James Yue
 
+// TODO:
+    // Bounce the ball in the opposite direction if the ball hits the paddle
+    // Make the opening Window with Welcome screen and following screens
+    // Create a isGameOver() method
+    // Update the score of the game when someone scores
+    // Make a ending window with the ability to replay the game or exit
+
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -12,7 +19,7 @@ public class Pong implements ActionListener, KeyListener {
     private static final int MAX_HEIGHT = 600;
     private static final int TOP_OF_WINDOW = 23;
     private static final int DELAY_IN_MILLISEC = 20;
-    private static final int STEP_SIZE = 10;
+    private static final int STEP_SIZE = 50;
 
     private Paddle paddleLeft;
     private Paddle paddleRight;
@@ -20,9 +27,8 @@ public class Pong implements ActionListener, KeyListener {
     private PongView window;
 
     public Pong() {
-        paddleLeft = new Paddle(200, 300,10, 20,40,Color.WHITE);
-        paddleRight = new Paddle(700, 300,10, 20,40,Color.WHITE);
-
+        paddleLeft = new Paddle(50, 300,10, 8,40,Color.WHITE);
+        paddleRight = new Paddle(850, 300,10, 8,40,Color.WHITE);
         b = new Ball(600, 300, 5,5, 10, Color.WHITE);
 
         this.window = new PongView(paddleLeft, paddleRight, b);
@@ -31,6 +37,10 @@ public class Pong implements ActionListener, KeyListener {
         Timer clock = new Timer(DELAY_IN_MILLISEC, this);
         clock.start();
     }
+
+//    public void run() {
+//
+//    }
 
     public void keyTyped(KeyEvent e) {
         // Nothing required for this program.
@@ -44,11 +54,22 @@ public class Pong implements ActionListener, KeyListener {
 
     public void keyPressed(KeyEvent e) {
         // The keyCode lets you know which key was pressed
+        int topOfPane = window.getInsets().top;
         switch(e.getKeyCode())
         {
-            case KeyEvent.VK_S:
-                // int topOfPane = window.getInsets().top;
-                paddleLeft.shiftY(STEP_SIZE, 0, PongView.SCREEN_WIDTH);
+            // Key controls for left paddle
+            case KeyEvent.VK_A:
+                paddleLeft.shiftY(-STEP_SIZE, topOfPane, PongView.SCREEN_HEIGHT);
+                break;
+            case KeyEvent.VK_Z:
+                paddleLeft.shiftY(STEP_SIZE, 0, PongView.SCREEN_HEIGHT);
+                break;
+            // Key controls for right paddle
+            case KeyEvent.VK_UP:
+                paddleRight.shiftY(-STEP_SIZE, topOfPane, PongView.SCREEN_HEIGHT);
+                break;
+            case KeyEvent.VK_DOWN:
+                paddleRight.shiftY(STEP_SIZE, 0, PongView.SCREEN_HEIGHT);
                 break;
         }
         window.repaint();
@@ -60,7 +81,12 @@ public class Pong implements ActionListener, KeyListener {
         window.repaint();
     }
 
+    public void checkContact() {
+        b.setDirection(-b.getDx());
+
+    }
     public static void main(String[] args) {
         Pong game = new Pong();
+        // game.run();
     }
 }

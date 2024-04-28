@@ -26,6 +26,13 @@ public class Paddle {
     public int getY() {
         return y;
     }
+    public int getHeight() {
+        return height;
+    }
+    public int getWidth() {
+        return width;
+    }
+
     public void move() {
         y = y + dy;
     }
@@ -45,10 +52,5 @@ public class Paddle {
     public void draw(Graphics g) {
         g.setColor(Color.white);
         g.fillRect(x - width, y - height, 2 * width, 2 * height);
-        // g.fillRect(x - width, y - height, 2 * height, 2 * height);
-
-
-//        paddleLeft = new Paddle(200, 300,10, 20,40,Color.WHITE);
-//        paddleRight = new Paddle(700, 300,10, 20,40,Color.WHITE);
     }
 }
