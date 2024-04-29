@@ -50,11 +50,14 @@ public class Ball {
         if ((x - radius <= xLow && dx < 0) || (x + radius >= xHigh && dx > 0)) {
             dx = -dx;
         }
-
         if ((y - radius <= yLow && dy < 0) || (y + radius >= yHigh && dy > 0)) {
             dy = -dy;
         }
     }
+
+//    public int getScore() {
+//
+//    }
 
     public void draw(Graphics g) {
         g.setColor(color);

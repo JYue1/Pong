@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Left paddle moves.">
+    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Created key function for both paddles. Added the center-line for the game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PongView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PongView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,20 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Pong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Pong" />
+      <module name="Pong" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Pong" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714077577934</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created key function for both paddles. Added the center-line for the game">
+      <option name="closed" value="true" />
+      <created>1714285590199</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714285590199</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,6 +116,7 @@
     <MESSAGE value="Good start. Window shows up" />
     <MESSAGE value="Added the DoubleBuffer. Ball now moves and bounces when it hits the edge. Currently working on the paddles." />
     <MESSAGE value="Left paddle moves." />
-    <option name="LAST_COMMIT_MESSAGE" value="Left paddle moves." />
+    <MESSAGE value="Created key function for both paddles. Added the center-line for the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created key function for both paddles. Added the center-line for the game" />
   </component>
 </project>

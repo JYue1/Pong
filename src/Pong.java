@@ -19,7 +19,7 @@ public class Pong implements ActionListener, KeyListener {
     private static final int MAX_HEIGHT = 600;
     private static final int TOP_OF_WINDOW = 23;
     private static final int DELAY_IN_MILLISEC = 20;
-    private static final int STEP_SIZE = 50;
+    private static final int STEP_SIZE = 75;
 
     private Paddle paddleLeft;
     private Paddle paddleRight;
@@ -78,12 +78,17 @@ public class Pong implements ActionListener, KeyListener {
     public void actionPerformed(ActionEvent e) {
         b.move();
         b.bounce(0, MAX_WIDTH, TOP_OF_WINDOW, MAX_HEIGHT);
+        checkContact();
         window.repaint();
     }
 
     public void checkContact() {
-        b.setDirection(-b.getDx());
-
+        if (paddleLeft.getX() + paddleLeft.getWidth() >= b.getX() && paddleLeft.getY() <= b.getY() && paddleLeft.getY() + paddleLeft.getHeight() >= b.getY() + (2 * b.getRadius())) {
+            b.setDirection(-1 * b.getDx());
+        }
+        if (paddleRight.getX() + paddleRight.getWidth() <= b.getX() && paddleRight.getY() <= b.getY() + (2 * b.getRadius())  && paddleRight.getY() + paddleRight.getHeight() >= b.getY() + (2 * b.getRadius())) {
+            b.setDirection(-1 * b.getDx());
+        }
     }
     public static void main(String[] args) {
         Pong game = new Pong();
