@@ -86,12 +86,13 @@ public class Pong implements ActionListener, KeyListener {
         if (paddleLeft.getX() + paddleLeft.getWidth() > b.getX() && paddleLeft.getY() <= b.getY() && paddleLeft.getY() + paddleLeft.getHeight() >= b.getY() + (2 * b.getRadius())) {
             b.setDirection(-1 * b.getDx());
             // move the ball beyond (past) the paddle
-
         }
+
         if (paddleRight.getX() + paddleRight.getWidth() <= b.getX() && paddleRight.getY() <= b.getY() + (2 * b.getRadius())  && paddleRight.getY() + paddleRight.getHeight() >= b.getY() + (2 * b.getRadius())) {
             b.setDirection(-1 * b.getDx());
         }
     }
+
     public static void main(String[] args) {
         Pong game = new Pong();
         // game.run();

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Ball bounces off the left paddle. Working on the right paddle.">
+    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Added text for the front screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pong.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PongView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PongView.java" afterDir="false" />
@@ -116,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714416819212</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added text for the front screen">
+      <option name="closed" value="true" />
+      <created>1714687252811</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714687252811</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +134,7 @@
     <MESSAGE value="Left paddle moves." />
     <MESSAGE value="Created key function for both paddles. Added the center-line for the game" />
     <MESSAGE value="Ball bounces off the left paddle. Working on the right paddle." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ball bounces off the left paddle. Working on the right paddle." />
+    <MESSAGE value="Added text for the front screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added text for the front screen" />
   </component>
 </project>

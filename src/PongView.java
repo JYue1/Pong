@@ -56,15 +56,15 @@ public class PongView extends JFrame {
         g.setColor(Color.black);
         g.fillRect(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-        g.setColor(Color.WHITE);
-        g.setFont(new Font("Arial", Font.BOLD, 40));
-        g.drawString("Welcome to Pong!" , 280, 150);
-        g.drawString("Controls" , 370, 245);
-        g.drawString("Player 1:", 100, 325);
-        g.drawString("Player 2:", 625, 325);
-        g.setFont(new Font("Arial", Font.BOLD, 25));
-        g.drawString("A and X", 125, 375);
-        g.drawString("Arrow Keys", 640, 375);
+//        g.setColor(Color.WHITE);
+//        g.setFont(new Font("Arial", Font.BOLD, 40));
+//        g.drawString("Welcome to Pong!" , 280, 150);
+//        g.drawString("Controls" , 370, 245);
+//        g.drawString("Player 1:", 100, 325);
+//        g.drawString("Player 2:", 625, 325);
+//        g.setFont(new Font("Arial", Font.BOLD, 25));
+//        g.drawString("A and X", 125, 375);
+//        g.drawString("Arrow Keys", 640, 375);
 
         g.setColor(Color.WHITE);
         for (int i = 0; i < 19; i++) {
