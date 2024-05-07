@@ -8,11 +8,15 @@ public class PongView extends JFrame {
     public static int SCREEN_WIDTH = 900;
     public static int SCREEN_HEIGHT = 600;
 
-    private Paddle leftPaddle;
-    private Paddle rightPaddle;
-    private Ball b;
 
-    public PongView(Paddle leftPaddle, Paddle rightPaddle, Ball b) {
+    private final Pong p;
+    private final Paddle leftPaddle;
+    private final Paddle rightPaddle;
+    private final Ball b;
+    private boolean gameStarted = false;
+
+    public PongView(Pong p, Paddle leftPaddle, Paddle rightPaddle, Ball b) {
+        this.p = p;
         this.leftPaddle = leftPaddle;
         this.rightPaddle = rightPaddle;
         this.b = b;
@@ -50,30 +54,47 @@ public class PongView extends JFrame {
         Toolkit.getDefaultToolkit().sync();
     }
 
+    public void setGameStarted(boolean gameStarted) {
+        this.gameStarted = gameStarted;
+    }
+
     public void myPaint(Graphics g) {
-
-
         g.setColor(Color.black);
         g.fillRect(0,0, SCREEN_WIDTH, SCREEN_HEIGHT);
-
-//        g.setColor(Color.WHITE);
-//        g.setFont(new Font("Arial", Font.BOLD, 40));
-//        g.drawString("Welcome to Pong!" , 280, 150);
-//        g.drawString("Controls" , 370, 245);
-//        g.drawString("Player 1:", 100, 325);
-//        g.drawString("Player 2:", 625, 325);
-//        g.setFont(new Font("Arial", Font.BOLD, 25));
-//        g.drawString("A and X", 125, 375);
-//        g.drawString("Arrow Keys", 640, 375);
-
         g.setColor(Color.WHITE);
-        for (int i = 0; i < 19; i++) {
-            g.fillRect(450, 45 + (i * 30), 15, 15);
-            g.drawRect(450, 45 + (i * 30), 15, 15);
-        }
+        g.setFont(new Font("Arial", Font.BOLD, 60));
 
-        leftPaddle.draw(g);
-        rightPaddle.draw(g);
-        b.draw(g);
+        if (gameStarted) {
+            g.setColor(Color.WHITE);
+            for (int i = 0; i < 19; i++) {
+                g.fillRect(450, 45 + (i * 30), 15, 15);
+                g.drawRect(450, 45 + (i * 30), 15, 15);
+            }
+            leftPaddle.draw(g);
+            rightPaddle.draw(g);
+            b.draw(g);
+            String scoreOne = "" + b.getScoreOne();
+            g.drawString(scoreOne, 550, 100);
+            String scoreTwo = "" + b.getScoreTwo();
+            g. drawString(scoreTwo, 350, 100);
+        }
+        else {
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("Arial", Font.BOLD, 40));
+            g.drawString("Welcome to Pong!" , 280, 150);
+            g.drawString("Controls:" , 370, 245);
+            g.drawString("Player 1:", 100, 325);
+            g.drawString("Player 2:", 625, 325);
+            g.setFont(new Font("Arial", Font.BOLD, 25));
+            g.drawString("Press the SPACE BAR to begin" , 275, 500);
+            g.drawString("A and X", 125, 375);
+            g.drawString("Arrow Keys", 640, 375);
+        }
+        if (p.isGameOver()) {
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("Arial", Font.BOLD, 40));
+            g.drawString(p.checkWinner(), 280, 220);
+            b.setBallLocation(450, 300);
+        }
     }
 }

@@ -1,17 +1,9 @@
 // James Yue
 
-// TODO:
-    // Bounce the ball in the opposite direction if the ball hits the paddle
-    // Make the opening Window with Welcome screen and following screens
-    // Create a isGameOver() method
-    // Update the score of the game when someone scores
-    // Make a ending window with the ability to replay the game or exit
-
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class Pong implements ActionListener, KeyListener {
@@ -31,16 +23,12 @@ public class Pong implements ActionListener, KeyListener {
         paddleRight = new Paddle(850, 300,10, 8,40,Color.WHITE);
         b = new Ball(600, 300, 5,5, 10, Color.WHITE);
 
-        this.window = new PongView(paddleLeft, paddleRight, b);
+        window = new PongView(this, paddleLeft, paddleRight, b);
         window.addKeyListener(this);
 
         Timer clock = new Timer(DELAY_IN_MILLISEC, this);
         clock.start();
     }
-
-//    public void run() {
-//
-//    }
 
     public void keyTyped(KeyEvent e) {
         // Nothing required for this program.
@@ -57,6 +45,9 @@ public class Pong implements ActionListener, KeyListener {
         int topOfPane = window.getInsets().top;
         switch(e.getKeyCode())
         {
+            case KeyEvent.VK_SPACE:
+                window.setGameStarted(true);
+                break;
             // Key controls for left paddle
             case KeyEvent.VK_A:
                 paddleLeft.shiftY(-STEP_SIZE, topOfPane, PongView.SCREEN_HEIGHT);
@@ -82,19 +73,46 @@ public class Pong implements ActionListener, KeyListener {
         window.repaint();
     }
 
+
     public void checkContact() {
-        if (paddleLeft.getX() + paddleLeft.getWidth() > b.getX() && paddleLeft.getY() <= b.getY() && paddleLeft.getY() + paddleLeft.getHeight() >= b.getY() + (2 * b.getRadius())) {
+        if (paddleLeft.getX() + paddleLeft.getWidth() > b.getX() && paddleLeft.getY() < b.getY() && paddleLeft.getY() + paddleLeft.getHeight() > b.getY() + (b.getRadius() * 2)) {
             b.setDirection(-1 * b.getDx());
             // move the ball beyond (past) the paddle
         }
 
-        if (paddleRight.getX() + paddleRight.getWidth() <= b.getX() && paddleRight.getY() <= b.getY() + (2 * b.getRadius())  && paddleRight.getY() + paddleRight.getHeight() >= b.getY() + (2 * b.getRadius())) {
+        if (paddleRight.getX() < b.getX() + (b.getRadius() * 2) && paddleRight.getY() < b.getY() && paddleRight.getY() + paddleRight.getHeight() > b.getY() + (b.getRadius() * 2)) {
+            b.setDirection(-1 * b.getDx());
+        }
+
+        if (b.isScoreLeft()) {
+            b.setBallLocation(450, 300);
+            b.setDirection(-1 * b.getDx());
+        }
+        if (b.isScoreRight()) {
+            b.setBallLocation(450, 300);
             b.setDirection(-1 * b.getDx());
         }
     }
 
+    public boolean isGameOver() {
+        if (b.getScoreOne() >= 9 || b.getScoreTwo() >= 9) {
+            return true;
+        }
+        return false;
+    }
+
+    public String checkWinner() {
+        String winner = "";
+        if (b.getScoreOne() < b.getScoreTwo()) {
+            winner = "Player 1     Wins!";
+        }
+        else {
+            winner = "Player 2     Wins!";
+        }
+        return winner;
+    }
+
     public static void main(String[] args) {
         Pong game = new Pong();
-        // game.run();
     }
 }

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Added text for the front screen">
+    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="V1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pong.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PongView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PongView.java" afterDir="false" />
     </list>
@@ -24,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JYue1"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/JYue1/Pong.git",
+    "accountId": "6c5ac795-0360-4db4-b2dd-ad6afa1f783d"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -124,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714687252811</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="V1">
+      <option name="closed" value="true" />
+      <created>1714858001820</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714858001820</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,6 +156,7 @@
     <MESSAGE value="Created key function for both paddles. Added the center-line for the game" />
     <MESSAGE value="Ball bounces off the left paddle. Working on the right paddle." />
     <MESSAGE value="Added text for the front screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added text for the front screen" />
+    <MESSAGE value="V1" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1" />
   </component>
 </project>
