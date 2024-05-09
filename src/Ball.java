@@ -10,8 +10,8 @@ public class Ball {
     private int dy;
     private int radius;
     private Color color;
-    private int scoreOne = 0;
-    private int scoreTwo = 0;
+    private double scoreOne = 0;
+    private double scoreTwo = 0;
 
     public Ball(int x, int y, int dx, int dy, int radius, Color color) {
         this.x = x;
@@ -51,7 +51,6 @@ public class Ball {
         this.y = newY;
     }
 
-
     // Make the bounce only if it hits the paddle or the top and bottom. The game will end if it hits the ends of the window
     // Reset the game and update the score.
     // if (goes to the left) update the player's score on the left side vice versa
@@ -65,14 +64,14 @@ public class Ball {
     }
 
     public boolean isScoreLeft() {
-        if (x - radius < 0 && dx < 0) {
+        if (x - radius < 0 && dx < 0) { // 1
             return true;
         }
         return false;
     }
 
     public boolean isScoreRight() {
-        if (x + radius > 900 && dx > 0) {
+        if (x + radius > 900 && dx > 0) { // 899
             return true;
         }
         return false;
@@ -80,16 +79,18 @@ public class Ball {
 
     public int getScoreOne() {
         if (x - radius <= 0 && dx < 0) {
-            scoreOne++;
+            scoreOne += 0.5;
         }
-        return scoreOne;
+        int score = (int) scoreOne;
+        return score;
     }
 
     public int getScoreTwo() {
         if (x + radius >= 900 && dx > 0) {
-            scoreTwo++;
+            scoreTwo += 0.5;
         }
-        return scoreTwo;
+        int score = (int) scoreTwo;
+        return score;
     }
 
     public void draw(Graphics g) {

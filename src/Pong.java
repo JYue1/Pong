@@ -1,4 +1,5 @@
 // James Yue
+// 5/10/24
 
 import java.awt.Color;
 import java.awt.event.KeyEvent;
@@ -11,7 +12,7 @@ public class Pong implements ActionListener, KeyListener {
     private static final int MAX_HEIGHT = 600;
     private static final int TOP_OF_WINDOW = 23;
     private static final int DELAY_IN_MILLISEC = 20;
-    private static final int STEP_SIZE = 75;
+    private static final int STEP_SIZE = 50;
 
     private Paddle paddleLeft;
     private Paddle paddleRight;
@@ -19,8 +20,8 @@ public class Pong implements ActionListener, KeyListener {
     private PongView window;
 
     public Pong() {
-        paddleLeft = new Paddle(50, 300,10, 8,40,Color.WHITE);
-        paddleRight = new Paddle(850, 300,10, 8,40,Color.WHITE);
+        paddleLeft = new Paddle(50, 300,30, 8,40,Color.WHITE);
+        paddleRight = new Paddle(850, 300,30, 8,40,Color.WHITE);
         b = new Ball(600, 300, 5,5, 10, Color.WHITE);
 
         window = new PongView(this, paddleLeft, paddleRight, b);
@@ -73,14 +74,13 @@ public class Pong implements ActionListener, KeyListener {
         window.repaint();
     }
 
-
     public void checkContact() {
-        if (paddleLeft.getX() + paddleLeft.getWidth() > b.getX() && paddleLeft.getY() < b.getY() && paddleLeft.getY() + paddleLeft.getHeight() > b.getY() + (b.getRadius() * 2)) {
+        if (paddleLeft.getX() + paddleLeft.getWidth()  + 10 > b.getX() && paddleLeft.getY() < b.getY() + 10 && paddleLeft.getY() + paddleLeft.getHeight()  + 10 > b.getY() + (b.getRadius() * 2)) {
             b.setDirection(-1 * b.getDx());
             // move the ball beyond (past) the paddle
         }
 
-        if (paddleRight.getX() < b.getX() + (b.getRadius() * 2) && paddleRight.getY() < b.getY() && paddleRight.getY() + paddleRight.getHeight() > b.getY() + (b.getRadius() * 2)) {
+        if (paddleRight.getX() < b.getX() + (b.getRadius() * 2) + 10 && paddleRight.getY() < b.getY() + 10 && paddleRight.getY() + paddleRight.getHeight() + 10 > b.getY() + (b.getRadius() * 2)) {
             b.setDirection(-1 * b.getDx());
         }
 

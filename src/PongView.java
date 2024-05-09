@@ -8,7 +8,6 @@ public class PongView extends JFrame {
     public static int SCREEN_WIDTH = 900;
     public static int SCREEN_HEIGHT = 600;
 
-
     private final Pong p;
     private final Paddle leftPaddle;
     private final Paddle rightPaddle;
@@ -87,7 +86,7 @@ public class PongView extends JFrame {
             g.drawString("Player 2:", 625, 325);
             g.setFont(new Font("Arial", Font.BOLD, 25));
             g.drawString("Press the SPACE BAR to begin" , 275, 500);
-            g.drawString("A and X", 125, 375);
+            g.drawString("A and Z", 125, 375);
             g.drawString("Arrow Keys", 640, 375);
         }
         if (p.isGameOver()) {

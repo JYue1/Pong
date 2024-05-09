@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="V1">
+    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paddle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pong.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PongView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PongView.java" afterDir="false" />
     </list>
@@ -25,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JYue1"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JYue1&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/JYue1/Pong.git",
-    "accountId": "6c5ac795-0360-4db4-b2dd-ad6afa1f783d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JYue1/Pong.git&quot;,
+    &quot;accountId&quot;: &quot;6c5ac795-0360-4db4-b2dd-ad6afa1f783d&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -145,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714858001820</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one">
+      <option name="closed" value="true" />
+      <created>1715057280087</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715057280087</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +166,7 @@
     <MESSAGE value="Ball bounces off the left paddle. Working on the right paddle." />
     <MESSAGE value="Added text for the front screen" />
     <MESSAGE value="V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1" />
+    <MESSAGE value="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one" />
+    <option name="LAST_COMMIT_MESSAGE" value="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one" />
   </component>
 </project>
