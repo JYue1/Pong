@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one">
+    <list default="true" id="23a78573-e601-4364-acc0-1930a8f6f72f" name="Changes" comment="Share Fair Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paddle.java" afterDir="false" />
@@ -154,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715057280087</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Share Fair Version">
+      <option name="closed" value="true" />
+      <created>1715294093509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715294093509</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -167,6 +175,7 @@
     <MESSAGE value="Added text for the front screen" />
     <MESSAGE value="V1" />
     <MESSAGE value="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one" />
-    <option name="LAST_COMMIT_MESSAGE" value="There is functionality in all the elements from start to finish. However, TODO: 1. Ensure the ball cannot phase through the paddle 2. Only have the score update by one" />
+    <MESSAGE value="Share Fair Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Share Fair Version" />
   </component>
 </project>

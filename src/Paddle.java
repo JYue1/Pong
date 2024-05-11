@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Paddle {
+    // Instance variables
     private int x;
     private int y;
     private int dy;
@@ -12,6 +13,7 @@ public class Paddle {
     private Color color;
 
     public Paddle(int x, int y, int dy, int width, int height, Color color) {
+        // Initializing instance variables
         this.x = x;
         this.y = y;
         this.dy = dy;
@@ -20,6 +22,7 @@ public class Paddle {
         this.color = color;
     }
 
+    // Getter methods
     public int getX() {
         return x;
     }
@@ -33,10 +36,7 @@ public class Paddle {
         return width;
     }
 
-    public void move() {
-        y = y + dy;
-    }
-
+    // Allows the paddle to move up and down
     public void shiftY(int shift, int yLow, int yHigh) {
         if (y - height + shift <= yLow && shift < 0) {
             y = yLow + height;
